@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.org/ontology#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/ontology#Aircraft2">
+    <rdf:type rdf:resource="http://example.org/ontology#Aircraft"/>
+    <rdfs:comment>This is another example of an aircraft instance.</rdfs:comment>
+    <rdfs:label>Aircraft2</rdfs:label>
+    <ns1:hasPayload rdf:resource="http://example.org/ontology#Payload2"/>
+    <ns1:hasFuelEfficiency rdf:resource="http://example.org/ontology#FuelEfficiency2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Aircraft1">
+    <rdf:type rdf:resource="http://example.org/ontology#Aircraft"/>
+    <rdfs:comment>This is an example of an aircraft instance.</rdfs:comment>
+    <rdfs:label>Aircraft1</rdfs:label>
+    <ns1:hasPayload rdf:resource="http://example.org/ontology#Payload1"/>
+    <ns1:hasFuelEfficiency rdf:resource="http://example.org/ontology#FuelEfficiency1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#MissionSuccess2">
+    <rdf:type rdf:resource="http://example.org/ontology#MissionSuccess"/>
+    <rdfs:comment>This is another example of a mission success instance.</rdfs:comment>
+    <rdfs:label>MissionSuccess2</rdfs:label>
+    <ns1:missionSuccessScore>5</ns1:missionSuccessScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Payload1">
+    <ns1:impactsFuelEfficiency rdf:resource="http://example.org/ontology#FuelEfficiency1"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Payload"/>
+    <ns1:impactsMissionSuccess rdf:resource="http://example.org/ontology#MissionSuccess1"/>
+    <rdfs:comment>This is an example of a payload instance.</rdfs:comment>
+    <rdfs:label>Payload1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Payload2">
+    <ns1:impactsFuelEfficiency rdf:resource="http://example.org/ontology#FuelEfficiency2"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Payload"/>
+    <ns1:impactsMissionSuccess rdf:resource="http://example.org/ontology#MissionSuccess2"/>
+    <rdfs:comment>This is another example of a payload instance.</rdfs:comment>
+    <rdfs:label>Payload2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#FuelEfficiency2">
+    <rdf:type rdf:resource="http://example.org/ontology#FuelEfficiency"/>
+    <rdfs:comment>This is another example of a fuel efficiency instance.</rdfs:comment>
+    <ns1:fuelEfficiencyScore>7.756</ns1:fuelEfficiencyScore>
+    <rdfs:label>FuelEfficiency2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#MissionSuccess1">
+    <rdf:type rdf:resource="http://example.org/ontology#MissionSuccess"/>
+    <rdfs:comment>This is an example of a mission success instance.</rdfs:comment>
+    <rdfs:label>MissionSuccess1</rdfs:label>
+    <ns1:missionSuccessScore>8</ns1:missionSuccessScore>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#FuelEfficiency1">
+    <rdf:type rdf:resource="http://example.org/ontology#FuelEfficiency"/>
+    <rdfs:comment>This is an example of a fuel efficiency instance.</rdfs:comment>
+    <ns1:fuelEfficiencyScore>7.35</ns1:fuelEfficiencyScore>
+    <rdfs:label>FuelEfficiency1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Mission2">
+    <ns1:hasMissionSuccess rdf:resource="http://example.org/ontology#MissionSuccess2"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Mission"/>
+    <rdfs:comment>This is another example of a mission instance.</rdfs:comment>
+    <rdfs:label>Mission2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#MissionSuccess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Mission1">
+    <ns1:hasMissionSuccess rdf:resource="http://example.org/ontology#MissionSuccess1"/>
+    <rdf:type rdf:resource="http://example.org/ontology#Mission"/>
+    <rdfs:comment>This is an example of a mission instance.</rdfs:comment>
+    <rdfs:label>Mission1</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Aircraft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#FuelEfficiency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Mission">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/ontology#Payload">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

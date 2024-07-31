@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j
+    environment:
+      - NEO4J_AUTH=neo4j/testpassword
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.meta.data
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4JLABS_PLUGINS=["apoc", "n10s"]
+    volumes:
+      - neo4j_data:/data
+    ports:
+      - "7687:7687"
+      - "7474:7474"
+
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: fuseki
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./shiro.ini:/fuseki/shiro.ini
+      - fuseki-data:/fuseki
+
+volumes:
+  fuseki-data:
+  neo4j_data:
